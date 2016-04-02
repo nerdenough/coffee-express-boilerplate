@@ -4,9 +4,18 @@ express = require 'express'
 bodyParser = require 'body-parser'
 cookieParser = require 'cookie-parser'
 logger = require 'morgan'
+stylus = require 'stylus'
+nib = require 'nib'
 
 # Custom routes
 index = require './routes/index'
+
+# Stylus compile function for nib
+compile = (str, path) ->
+  stylus str
+    .set 'filename', path
+    .set 'compress', true
+    .use nib()
 
 # Server setup
 app = express()
@@ -20,6 +29,10 @@ app.use logger 'dev'
 app.use bodyParser.json()
 app.use bodyParser.urlencoded extended: false
 app.use cookieParser()
+app.use stylus.middleware
+  src: path.join(__dirname, 'stylus')
+  dest: path.join(__dirname, 'public/css')
+  compile: compile
 
 app.use express.static path.join(__dirname, 'public')
 
