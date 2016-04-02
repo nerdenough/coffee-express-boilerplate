@@ -6,6 +6,7 @@ cookieParser = require 'cookie-parser'
 logger = require 'morgan'
 stylus = require 'stylus'
 nib = require 'nib'
+coffeescript = require 'connect-coffee-script'
 
 # Custom routes
 index = require './routes/index'
@@ -33,6 +34,11 @@ app.use stylus.middleware
   src: path.join(__dirname, 'stylus')
   dest: path.join(__dirname, 'public/css')
   compile: compile
+app.use coffeescript
+  src: path.join(__dirname, 'app')
+  dest: path.join(__dirname, 'public/js')
+  prefix: '/js'
+  compress: true
 
 app.use express.static path.join(__dirname, 'public')
 

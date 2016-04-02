@@ -10,6 +10,7 @@ following packages to help get you started:
 - `pug`
 - `stylus`
 - `nib`
+- `connect-coffee-script`
 
 ## Getting Started
 To get started using Coffee Express Boilerplate, you will need to run the
@@ -33,9 +34,13 @@ structure).
 
 ```
 .
+├── app
+│   └── # front end coffeescript should be placed here
 ├── public
-│   └── css
-│       └── # compiled stylesheets will be placed here
+│   ├── css
+│   │   └── # compiled stylesheets will be placed here
+│   └── js
+│   │   └── # compiled javascript will be placed here
 ├── stylus
 │   └── # stylus files should be placed here
 ├── routes
@@ -50,6 +55,9 @@ structure).
 └── server.coffee
 ```
 
+### /app
+The app directory should contain all of your front end CoffeeScript. These files
+will be compiled to `/public/js` when requested.
 
 ### /public
 Public is a directory should contain any files you want visible to the public,

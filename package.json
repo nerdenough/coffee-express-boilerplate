@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "body-parser": "^1.15.0",
+    "connect-coffee-script": "^0.2.1",
     "cookie-parser": "^1.4.1",
     "express": "^4.13.4",
     "morgan": "^1.7.0",

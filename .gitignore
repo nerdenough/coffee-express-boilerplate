@@ -35,3 +35,6 @@ jspm_packages
 
 # Compiled CSS
 public/css
+
+# Compiled JS
+public/js
