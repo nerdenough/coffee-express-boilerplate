@@ -1,6 +1,6 @@
 {
   "name": "coffee-express-boilerplate",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A boilerplate CoffeeScript/Express template",
   "main": "server.coffee",
   "author": {
