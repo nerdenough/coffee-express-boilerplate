@@ -39,6 +39,7 @@ app.use coffeescript
   dest: path.join(__dirname, 'public/js')
   prefix: '/js'
   compress: true
+  bare: true
 
 app.use express.static path.join(__dirname, 'public')
 
