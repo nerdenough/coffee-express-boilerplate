@@ -32,9 +32,3 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
-
-# Compiled CSS
-public/css
-
-# Compiled JS
-public/js
